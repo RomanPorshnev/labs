@@ -14,6 +14,7 @@ public:
     InputOutput(int m = 20, int n = 40);
     ~InputOutput();
     void Asking();
+    int AskControllerSource();
     bool CheckingForCorrectness(std::string, int&, int);
     void Print(Field*, Player*);
     void info();
@@ -35,5 +36,6 @@ private:
     Component* log_level3;
     PrintLogs* PrLogsFile;
     PrintLogs* PrLogsConsole;
+    enum SourceController{Terminal = 1, File = 2};
 };
 

@@ -1,4 +1,4 @@
-#include "ReadFromKeyb.h"
+#include "ReadCommand.h"
 #include "MoveDown.h"
 #include "MoveUp.h"
 #include "MoveLeft.h"
@@ -6,28 +6,33 @@
 #include "Kick.h"
 #include <iostream>
 #include <Windows.h>
+#include <fstream>
 
-#define down 115
-#define up 119
-#define left 97
-#define right 100
-#define kick 32
+
 #define log_to_file 102
 #define log_to_console 99
 #define first_level 49
 #define second_level 50
 #define third_level 51
 
-ReadFromKeyb::ReadFromKeyb() {
+ReadCommand::ReadCommand() {
+    GetCommands();
+    up = controller_list[0];
+    down = controller_list[1];
+    left = controller_list[2];
+    right = controller_list[3];
+    kick = controller_list[4];
     singleton = singleton->GetInstance();
+    command = nullptr;
 }
 
-ReadFromKeyb::~ReadFromKeyb()
+ReadCommand::~ReadCommand()
 {
-
+    singleton = nullptr;
+    delete singleton;
 }
 
-void ReadFromKeyb::CommRead(Field* Fld, Player* Plr, std::vector<Enemy*>& Enemies, int key)
+void ReadCommand::execute(Field* Fld, Player* Plr, std::vector<Enemy*>& Enemies, int key)
 {
     command = nullptr;
     if (key == down)
@@ -56,11 +61,25 @@ void ReadFromKeyb::CommRead(Field* Fld, Player* Plr, std::vector<Enemy*>& Enemie
 
     if (command) {
         command->execute(Plr, Fld, Enemies);
-        delete command;
-    }  
+    }
+    delete command;
 }
 
-void ReadFromKeyb::LoggingRead(int key)
+void ReadCommand::GetCommands()
+{
+    std::ifstream fin("CommandList.txt");
+    while (std::getline(fin, buff_controller)) {
+        for (int i = 0; i < buff_controller.size(); i++)
+            if (buff_controller[i] == '=') {
+                id = i;
+                break;
+            }
+        controller_list.push_back(buff_controller[id + 1]);
+    }
+    fin.close();
+}
+
+void ReadCommand::LoggingRead(int key)
 {
     if (key == log_to_file) {
         if (singleton->GetFileLog()) {

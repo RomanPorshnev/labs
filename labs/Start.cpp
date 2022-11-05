@@ -25,7 +25,6 @@ void Start::run()
 	FldGen.GeneratorEnemies(Fld, Enemies);
 	Fld->SetPosPlayer(Plr);
 	Plr->SetAmmo((int)(std::sqrt(Fld->GetM() * Fld->GetN()) / 4 * 3));
-	InOut.Print(Fld, Plr);
 	Frm.Update(Fld, Plr, Enemies);
 }
 

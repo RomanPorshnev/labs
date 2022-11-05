@@ -134,10 +134,12 @@
     <ClCompile Include="DecoratorLevel2.cpp" />
     <ClCompile Include="DecoratorLevel3.cpp" />
     <ClCompile Include="DecoratorMessage.cpp" />
+    <ClCompile Include="ExtendedControllerFile.cpp" />
+    <ClCompile Include="ExtendedControllerSource.cpp" />
     <ClCompile Include="PrintLogs.cpp" />
     <ClCompile Include="PrintLogsConsole.cpp" />
     <ClCompile Include="PrintLogsFile.cpp" />
-    <ClCompile Include="ReadFromKeyb.cpp" />
+    <ClCompile Include="ReadCommand.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyAttack.cpp" />
     <ClCompile Include="EnemyDie.cpp" />
@@ -157,7 +159,6 @@
     <ClCompile Include="LooseHealthEnemy.cpp" />
     <ClCompile Include="LooseHealthPlayer.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Message.cpp" />
     <ClCompile Include="MoveDown.cpp" />
     <ClCompile Include="MoveLeft.cpp" />
     <ClCompile Include="MoveRight.cpp" />
@@ -180,10 +181,12 @@
     <ClInclude Include="DecoratorLevel2.h" />
     <ClInclude Include="DecoratorLevel3.h" />
     <ClInclude Include="DecoratorMessage.h" />
+    <ClInclude Include="ExtendedControllerFile.h" />
+    <ClInclude Include="ExtendedControllerSource.h" />
     <ClInclude Include="PrintLogs.h" />
     <ClInclude Include="PrintLogsConsole.h" />
     <ClInclude Include="PrintLogsFile.h" />
-    <ClInclude Include="ReadFromKeyb.h" />
+    <ClInclude Include="ReadCommand.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyAttack.h" />
     <ClInclude Include="EnemyDie.h" />

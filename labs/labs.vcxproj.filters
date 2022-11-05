@@ -19,6 +19,36 @@
     <Filter Include="Файлы заголовков\DecoratorMessage">
       <UniqueIdentifier>{0219b776-8592-4d3c-86b8-d6b59dea7578}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\ExtendedControllerSource">
+      <UniqueIdentifier>{d0c4a989-de94-4ee3-a79d-b6c0a970d41e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\ExtendedControllerSource">
+      <UniqueIdentifier>{83e7311c-f15a-4982-bdc6-82ca32f380b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Event">
+      <UniqueIdentifier>{4040d80e-a531-4ee5-9aa7-0ebc97e31649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\EventFactory">
+      <UniqueIdentifier>{4fb90340-7901-439c-b128-7d235f57986e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Command">
+      <UniqueIdentifier>{87174fc3-d6ae-4210-97ce-7c2422dd3817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\PrintLogs">
+      <UniqueIdentifier>{3821f9fc-13df-4525-a7be-08d87afb0760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Event">
+      <UniqueIdentifier>{5283ac49-e4e8-4670-b6d5-c0b11f0f1c54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\EventFactory">
+      <UniqueIdentifier>{dc363306-c6fd-478a-9c90-bdc280169333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\PrintLogs">
+      <UniqueIdentifier>{9b154e15-ab8d-4329-864c-46f69d95e9a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Command">
+      <UniqueIdentifier>{6b1ba098-5289-4179-90ab-a2e331f0d77a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,49 +69,7 @@
     <ClCompile Include="InputOutput.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Command.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveDown.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveUp.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveLeft.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveRight.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Event.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerEvent.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GetHealthPlayer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GetScorePlayer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GetAmmoPlayer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="LooseAmmoPlayer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerDie.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyDie.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyAttack.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ReadFromKeyb.cpp">
+    <ClCompile Include="ReadCommand.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
@@ -90,34 +78,13 @@
     <ClCompile Include="Kick.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyEvent.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="LooseHealthEnemy.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="LooseHealthPlayer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Frames.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="EventFactory.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerEventFactory.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyEventFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Cell.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Message.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="DecoratorMessage.cpp">
@@ -144,14 +111,80 @@
     <ClCompile Include="DecoratorLevel3.cpp">
       <Filter>Исходные файлы\DecoratorMessage</Filter>
     </ClCompile>
+    <ClCompile Include="ExtendedControllerFile.cpp">
+      <Filter>Исходные файлы\ExtendedControllerSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtendedControllerSource.cpp">
+      <Filter>Исходные файлы\ExtendedControllerSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyAttack.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyDie.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyEvent.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="GetAmmoPlayer.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="GetHealthPlayer.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="GetScorePlayer.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="LooseAmmoPlayer.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="LooseHealthEnemy.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="LooseHealthPlayer.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyEventFactory.cpp">
+      <Filter>Исходные файлы\EventFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="EventFactory.cpp">
+      <Filter>Исходные файлы\EventFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerDie.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerEvent.cpp">
+      <Filter>Исходные файлы\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerEventFactory.cpp">
+      <Filter>Исходные файлы\EventFactory</Filter>
+    </ClCompile>
     <ClCompile Include="PrintLogs.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\PrintLogs</Filter>
     </ClCompile>
     <ClCompile Include="PrintLogsConsole.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\PrintLogs</Filter>
     </ClCompile>
     <ClCompile Include="PrintLogsFile.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\PrintLogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Исходные файлы\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveDown.cpp">
+      <Filter>Исходные файлы\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveLeft.cpp">
+      <Filter>Исходные файлы\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveRight.cpp">
+      <Filter>Исходные файлы\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveUp.cpp">
+      <Filter>Исходные файлы\Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,49 +206,7 @@
     <ClInclude Include="FieldGenerators.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Command.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveDown.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveUp.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveLeft.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveRight.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Event.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerEvent.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GetHealthPlayer.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GetScorePlayer.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GetAmmoPlayer.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="LooseAmmoPlayer.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerDie.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyDie.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyAttack.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ReadFromKeyb.h">
+    <ClInclude Include="ReadCommand.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
@@ -224,25 +215,7 @@
     <ClInclude Include="Kick.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyEvent.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="LooseHealthEnemy.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="LooseHealthPlayer.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Frames.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="EventFactory.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerEventFactory.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyEventFactory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
@@ -275,14 +248,80 @@
     <ClInclude Include="DecoratorLevel3.h">
       <Filter>Файлы заголовков\DecoratorMessage</Filter>
     </ClInclude>
+    <ClInclude Include="ExtendedControllerFile.h">
+      <Filter>Файлы заголовков\ExtendedControllerSource</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtendedControllerSource.h">
+      <Filter>Файлы заголовков\ExtendedControllerSource</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyAttack.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyDie.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyEvent.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="GetAmmoPlayer.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="GetHealthPlayer.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="GetScorePlayer.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="LooseAmmoPlayer.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="LooseHealthEnemy.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="LooseHealthPlayer.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerDie.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerEvent.h">
+      <Filter>Файлы заголовков\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventFactory.h">
+      <Filter>Файлы заголовков\EventFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyEventFactory.h">
+      <Filter>Файлы заголовков\EventFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerEventFactory.h">
+      <Filter>Файлы заголовков\EventFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Файлы заголовков\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveDown.h">
+      <Filter>Файлы заголовков\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveLeft.h">
+      <Filter>Файлы заголовков\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveRight.h">
+      <Filter>Файлы заголовков\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveUp.h">
+      <Filter>Файлы заголовков\Command</Filter>
+    </ClInclude>
     <ClInclude Include="PrintLogs.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\PrintLogs</Filter>
     </ClInclude>
     <ClInclude Include="PrintLogsConsole.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\PrintLogs</Filter>
     </ClInclude>
     <ClInclude Include="PrintLogsFile.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\PrintLogs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -30,6 +30,5 @@ private:
 	bool level1;
 	bool level2;
 	bool level3;
-	Message msg;
 };
 
