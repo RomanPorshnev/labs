@@ -1,0 +1,41 @@
+[LEVEL 2] The game started                    |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the up    |
+[LEVEL 1] The player made a move to the up    |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the up    |
+[LEVEL 1] The player made a move to the left  |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The enemy has lost health           |
+[LEVEL 1] The enemy has lost health           |
+[LEVEL 1] The enemy has lost health           |
+[LEVEL 1] The player got score                |
+[LEVEL 1] The enemy died                      |
+[LEVEL 1] The player made a move to the up    |
+[LEVEL 1] The player got ammo                 |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player hit the wall             |
+[LEVEL 1] The player made a move to the up    |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player made a move to the down  |
+[LEVEL 1] The player hit the wall             |
+[LEVEL 1] The player made a move to the right |
+[LEVEL 1] The player made a move to the right |
