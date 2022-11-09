@@ -23,21 +23,6 @@ InputOutput::~InputOutput()
     delete log_level3;
 }
 
-/*std::ostream& operator<<(std::ostream& os, const std::vector<std::string> list_logs)
-{
-    for (int i = 0; i < list_logs.size(); i++)
-        os << list_logs[i];
-    return os;
-}
-*/
-
-/*std::ofstream& operator<<(std::ofstream& os, const std::vector<std::string> list_logs)
-{
-    for (int i = 0; i < list_logs.size(); i++)
-        os << list_logs[i];
-    return os;
-}
-*/
 void InputOutput::Asking()
 {
     std::cout << "Do you want to log in a file logs.txt? [y/n]\n";
@@ -76,7 +61,21 @@ void InputOutput::Asking()
         std::getline(std::cin, input, '\n');
         std::cout << '\n';
     } while (!CheckingForCorrectness(input, n, 2));
-    system("cls");
+}
+
+int InputOutput::AskControllerSource()
+{
+    std::cout << "Where from do you want to take commands?\n";
+    std::cout << "Press [f] if you want to take commands from [FileController.txt]\n";
+    std::cout << "Press another if you want to take commands from GUI\n";
+    char source = getchar();
+    switch (source)
+    {
+    case 'f':
+        return File;
+    default:
+        return Terminal;
+    }
 }
 
 bool InputOutput::CheckingForCorrectness(std::string input, int& x, int type)
@@ -163,24 +162,5 @@ int InputOutput::GetN()
     return this->n;
 }
 
-void InputOutput::PrintLogsToConsole()
-{
-    /*if (singleton->GetConsoleLog()) {
-        list_logs = singleton->GetListLogsConsole();
-        std::cout << list_logs;
-    }
-    */
-}
-
-void InputOutput::PrintLogsToFile()
-{   
-    /*if (singleton->GetFileLog()) {
-        list_logs = singleton->GetListLogsFile();
-        std::ofstream fout("logs.txt");
-        fout << list_logs;
-        fout.close();
-    }
-    */
-}
 
 
