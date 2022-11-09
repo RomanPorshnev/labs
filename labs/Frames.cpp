@@ -1,19 +1,23 @@
 #include "Frames.h"
 #include <conio.h>
 #include <Windows.h>
-#include "InputOutput.h"
-#include "ReadFromKeyb.h"
 #include <time.h>
 #include "Event.h"
-#include "FieldGenerators.h"
 #include "EnemyAttack.h"
 #include "WithoutLevel2_Component.h"
 #include "PrintLogsConsole.h"
 #include "PrintLogsFile.h"
 #include "DecoratorLevel2.h"
+#include "ExtendedControllerFile.h"
+
 #define esc 27
 Frames::Frames()
 {
+    key = -1;
+    start = clock();
+    end = clock();
+    controller_source = new ExtendedControllerFile();
+    source = 1;
     singleton = singleton->GetInstance();
     woutlevel2 = new WithoutLevel2_Component;
     log_level2 = new DecoratorLevel2(woutlevel2);
@@ -32,15 +36,11 @@ Frames::~Frames()
 
 void Frames::Update(Field* Fld, Player* Plr, std::vector<Enemy*> Enemies)
 {
-    int key = 0;
-    ReadFromKeyb Rfk;
-    InputOutput InOut;
+    source = InOut.AskControllerSource();
     singleton->logging(log_level2->Operation(GameStart), SecondLevel);
     InOut.Print(Fld, Plr);
     PrLogsConsole->execute();
     PrLogsFile->execute();
-    FieldGenerators FldGen;
-    clock_t start = clock(), end;
     do
     {
         end = clock();
@@ -49,13 +49,33 @@ void Frames::Update(Field* Fld, Player* Plr, std::vector<Enemy*> Enemies)
             PrLogsConsole->execute();
             PrLogsFile->execute();
         }
-        if (_kbhit()) {
-            key = _getch();
-            Rfk.CommRead(Fld, Plr, Enemies, key);
-            Rfk.LoggingRead(key);
-            InOut.Print(Fld, Plr);
-            PrLogsConsole->execute();
-            PrLogsFile->execute();
+        switch (source)
+        {
+        case Terminal:
+            if (_kbhit()) {
+                key = _getch();
+                ReadComm.execute(Fld, Plr, Enemies, key);
+                ReadComm.LoggingRead(key);
+                InOut.Print(Fld, Plr);
+                PrLogsConsole->execute();
+                PrLogsFile->execute();
+            }
+            break;
+        case File:
+            key_file = controller_source->execute();
+            if (key_file != -1) {
+                ReadComm.execute(Fld, Plr, Enemies, key_file);
+                ReadComm.LoggingRead(key);
+                InOut.Print(Fld, Plr);
+                PrLogsConsole->execute();
+                PrLogsFile->execute();
+            }
+            if (_kbhit()) {
+                key = _getch();
+            }
+            break;
+        default:
+            break;
         }
     } while (key != esc && Plr->GetHP() && CheckEnemies(Enemies));
     singleton->logging(log_level2->Operation(GameEnd), SecondLevel);
